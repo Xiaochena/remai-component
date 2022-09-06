@@ -9,7 +9,7 @@ Corepack 添加于 `Node v16.9.0, v14.19.0` 、可以使用 `Corepack` 指定项
 - 单应用激活
 
 ```zsh
-$ corepack enable
+corepack enable
 ```
 
 - 用声明的包管理器，会自动下载对应的 `pnpm`，然后再执行
@@ -43,7 +43,7 @@ pnpm install
 将依赖包安装到工程的根目录下，作为所有 package 的公共依赖。比如`react`
 
 ```zsh
-$ pnpm install react -w
+pnpm install react -w
 ```
 
 ### 给某个 package 单独安装指定依赖：` --filter、-F`
@@ -51,7 +51,7 @@ $ pnpm install react -w
 给 `@remai/business` 安装一个依赖包，比如 `axios`
 
 ```zsh
-$ pnpm add axios --filter @remai/business
+pnpm add axios --filter @remai/business
 ```
 
 > --filter 参数跟着的是 package 下的 `package.json` 的 `name` 字段，并不是目录名。
@@ -59,11 +59,11 @@ $ pnpm add axios --filter @remai/business
 执行 `@remai/business` 下的 scripts 脚本：
 
 ```zsh
-$ pnpm build --filter @remai/business
+pnpm build --filter @remai/business
 ```
 
 跟着匹配规则来指定对匹配上规则的包进行操作
 
 ```zsh
-$ pnpm build --filter "./packages/**"
+pnpm build --filter "./packages/**"
 ```
