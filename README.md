@@ -2,9 +2,9 @@
 
 ## 准备开始
 
-推荐使用 `Node.js v16.13` 版本、可以使用 `corepack` 指定项目使用的包管理器以及版本
+Corepack 添加于 `Node v16.9.0, v14.19.0` 、可以使用 `Corepack` 指定项目使用的包管理器(pnpm 或 yarn)以及版本、而无需特地全局安装
 
-### corepack
+### Corepack
 
 - 单应用激活
 
@@ -18,7 +18,7 @@ $ corepack enable
 pnpm install
 ```
 
-### 或全局安装
+### 或全局安装 Pnpm
 
 - 直接全局安装 `pnpm`
 
@@ -34,7 +34,7 @@ pnpm install
 
 ---
 
-## pnpm
+## Pnpm
 
 全局的公共依赖包，比如打包涉及到的 father、typescript 等
 
