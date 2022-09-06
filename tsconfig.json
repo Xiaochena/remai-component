@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    // "baseUrl": "./",
+    // "paths": {
+    //   "@remai/business": ["packages/business/src/index.ts"],
+    //   "@remai/design": ["packages/design/src/index.ts"]
+    // },
+    "moduleResolution": "node",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "types": ["jest"],
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true
+  }
+}

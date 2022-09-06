@@ -1,0 +1,54 @@
+{
+  "private": true,
+  "name": "remai-component",
+  "version": "1.0.0",
+  "packageManager": "pnpm@7.1.0",
+  "scripts": {
+    "start": "dumi dev",
+    "build:design": "pnpm --filter @remai/design build",
+    "build:business": "pnpm --filter @remai/business build",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "deploy": "npm run docs:build && npm run docs:deploy",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "prepublishOnly": "npm run build",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "module": "dist/esm/index.js",
+  "typings": "dist/esm/index.d.ts",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@types/react": "^18.0.18",
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^13.0.0",
+    "@types/jest": "^27.0.3",
+    "@umijs/fabric": "^2.8.1",
+    "@umijs/test": "^3.0.5",
+    "dumi": "^1.1.0",
+    "father": "^4.0.0-rc.2",
+    "gh-pages": "^3.0.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.1",
+    "react-dom": "^18.2.0",
+    "react-route": "^1.0.3",
+    "react-router": "^6.3.0",
+    "typescript": "^4.8.2",
+    "webpack": "^5.74.0",
+    "yorkie": "^2.0.0"
+  }
+}

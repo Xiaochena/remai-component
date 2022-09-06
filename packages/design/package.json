@@ -1,0 +1,15 @@
+{
+  "name": "@remai/design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "father build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
