@@ -14,7 +14,8 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "commit": "cz"
   },
   "engines": {
     "pnpm": ">=7"
@@ -32,6 +33,11 @@
       "prettier --parser=typescript --write"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "react": "^18.0.0"
   },
@@ -42,6 +48,8 @@
     "@types/react": "^18.0.18",
     "@umijs/fabric": "^2.8.1",
     "@umijs/test": "^3.0.5",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
     "dumi": "^1.1.0",
     "father": "^4.0.0-rc.2",
     "gh-pages": "^3.0.0",
