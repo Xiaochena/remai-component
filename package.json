@@ -16,6 +16,9 @@
     "prepublishOnly": "npm run build",
     "preinstall": "npx only-allow pnpm"
   },
+  "engines": {
+    "pnpm": ">=7"
+  },
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
   "gitHooks": {
@@ -30,13 +33,13 @@
     ]
   },
   "dependencies": {
-    "@types/react": "^18.0.18",
     "react": "^18.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^13.0.0",
     "@types/jest": "^27.0.3",
+    "@types/react": "^18.0.18",
     "@umijs/fabric": "^2.8.1",
     "@umijs/test": "^3.0.5",
     "dumi": "^1.1.0",

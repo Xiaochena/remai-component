@@ -2,7 +2,7 @@
 
 ## 准备开始
 
-Corepack 添加于 `Node v16.9.0, v14.19.0` 、可以使用 `Corepack` 指定项目使用的包管理器(pnpm 或 yarn)以及版本、而无需特地全局安装
+Corepack 添加于 `Node v16.9.0, v14.19.0` 、可以使用 `Corepack` 指定项目使用的包管理器(pnpm 或 yarn)以及版本
 
 ### Corepack
 

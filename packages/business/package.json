@@ -13,6 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@remai/design": "workspace:^1.0.0"
+    "@remai/design": "workspace:^"
   }
 }

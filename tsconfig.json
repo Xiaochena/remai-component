@@ -2,11 +2,10 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    // "baseUrl": "./",
-    // "paths": {
-    //   "@remai/business": ["packages/business/src/index.ts"],
-    //   "@remai/design": ["packages/design/src/index.ts"]
-    // },
+    "baseUrl": "./",
+    "paths": {
+      "@remai/*": ["packages/*/src"]
+    },
     "moduleResolution": "node",
     "jsx": "react",
     "esModuleInterop": true,
