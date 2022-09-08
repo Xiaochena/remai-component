@@ -15,7 +15,8 @@
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build",
     "preinstall": "npx only-allow pnpm",
-    "commit": "cz"
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "engines": {
     "pnpm": ">=7"
@@ -23,6 +24,7 @@
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
   "gitHooks": {
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
@@ -42,6 +44,8 @@
     "react": "^18.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^13.0.0",
     "@types/jest": "^27.0.3",
@@ -53,6 +57,7 @@
     "dumi": "^1.1.0",
     "father": "^4.0.0-rc.2",
     "gh-pages": "^3.0.0",
+    "husky": "^8.0.1",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "react-dom": "^18.2.0",
