@@ -5,7 +5,8 @@ module.exports = {
   rules: {
     'no-var': 'error', // 不能使用var声明变量
     'no-extra-semi': 'error',
-    '@typescript-eslint/indent': ['error', 2],
+    // 这东西有点问题:https://typescript-eslint.io/rules/indent
+    // '@typescript-eslint/indent': ['error', 2],
     'import/extensions': 'off',
     'linebreak-style': [0, 'error', 'windows'],
     indent: ['error', 2, { SwitchCase: 1 }], // error类型，缩进2个空格
