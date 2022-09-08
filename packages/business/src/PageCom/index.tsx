@@ -6,7 +6,7 @@ const PageCom: React.FC<React.PropsWithChildren<DivProps>> = ({ children, ...div
   return (
     <div {...divProps}>
       <Btn>按钮</Btn>
-      <div>PageCom：{children}</div>
+      <div>PageCom：{children} </div>
     </div>
   );
 };
