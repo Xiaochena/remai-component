@@ -63,7 +63,7 @@ importers:
 
   packages/business:
     specifiers:
-      '@remai/design': workspace:^1.0.0
+      '@remai/design': workspace:^
     dependencies:
       '@remai/design': link:../design
 
