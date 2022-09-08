@@ -1,1 +1,1 @@
-export { default as PageCom } from './PageCom';
+export { default as Work } from './work';
