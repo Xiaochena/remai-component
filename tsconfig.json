@@ -4,7 +4,8 @@
     "module": "esnext",
     "baseUrl": "./",
     "paths": {
-      "@remai/*": ["packages/*/src"]
+      "@remai/*": ["packages/*/src"],
+      "@business/*": ["packages/business/src/*"]
     },
     "moduleResolution": "node",
     "jsx": "react-jsx",

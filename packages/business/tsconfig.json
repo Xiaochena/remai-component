@@ -1,9 +1,0 @@
-{
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["packages/*"],
-      "@business/*": ["packages/business/src/*"]
-    }
-  }
-}
