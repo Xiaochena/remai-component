@@ -8,7 +8,7 @@ export default defineConfig({
   outputPath: 'docs-dist',
   mode: 'site',
   alias: {
-    '@business': 'E:/myProject/remai-component/packages/business/src',
+    '@business': __dirname + '/packages/business/src',
   },
   // more config: https://d.umijs.org/config
 });
