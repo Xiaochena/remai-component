@@ -1,8 +1,19 @@
-import React from 'react';
-import ListLayout from '@business/component/list-layout';
+import type { FC } from 'react';
+import { useContext } from 'react';
 
-const work: React.FC = () => {
-  return <ListLayout header="测试">Work</ListLayout>;
+import ListLayout from '@business/component/list-layout';
+import ConfigContext from '@business/config-provider/ConfigContext';
+
+import xhsWorkHeader from '@business/image/work/xhs-work-header.png';
+
+const Work: FC = () => {
+  const { mainHeight } = useContext(ConfigContext);
+
+  return (
+    <ListLayout headerImg={xhsWorkHeader} style={{}}>
+      Work
+    </ListLayout>
+  );
 };
 
-export default work;
+export default Work;
