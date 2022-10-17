@@ -1,17 +1,17 @@
 ---
-title: Btn 按钮
+title: 列表内容搜索
 nav:
   title: 组件
   order: 1
   path: /design
 group:
-  title: 通用组件
-  order: 2
+  title: UI 组件
+  order: 1
 ---
 
-# Btn 按钮
+# ListSearch 输入框
 
-Demo 编写示例
+列表中的 UI 组件（搜索）
 
 ## 代码演示
 

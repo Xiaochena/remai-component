@@ -2,9 +2,12 @@
   "name": "@remai/business",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "cjs/index.js",
+  "typings": "cjs/index.d.ts",
+  "module": "esm/index.js",
   "files": [
-    "dist"
+    "esm",
+    "cjs"
   ],
   "scripts": {
     "build": "father build",
@@ -13,7 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@remai/design": "workspace:^"
+    "@remai/design": "workspace:^",
+    "classnames": "^2.3.2"
   },
   "peerDependencies": {
     "react": ">=17.0.2",

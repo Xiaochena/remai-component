@@ -1,4 +1,5 @@
 import type { HTMLAttributes } from 'react';
+import classnames from 'classnames';
 import styles from './styles.less';
 
 interface ListLayoutProps extends HTMLAttributes<HTMLDivElement> {
@@ -7,10 +8,10 @@ interface ListLayoutProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const ListLayout: React.FC<ListLayoutProps> = (props) => {
-  const { children, headerImg, ...divProps } = props;
+  const { children, headerImg, className, ...divProps } = props;
 
   return (
-    <div className={styles.listLayout} {...divProps}>
+    <div className={classnames(styles.listLayout, className)} {...divProps}>
       {headerImg && (
         <div className={styles.headerWrap}>
           <img src={headerImg} className={styles.headerImg} />

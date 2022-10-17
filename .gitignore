@@ -9,6 +9,8 @@
 # production
 **/dist
 /docs-dist
+**/esm
+**/cjs
 
 # misc
 .DS_Store
