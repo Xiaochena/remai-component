@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { FC, useState } from 'react';
 import { ListSearch } from '@remai/design';
 
