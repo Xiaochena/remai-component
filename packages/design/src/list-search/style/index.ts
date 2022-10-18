@@ -1,9 +1,17 @@
 import styled from 'styled-components';
 
-export const Wrap = styled.div`
-  & .listSearch {
+interface WrapProps {
+  prefixCls: string;
+}
+
+const preFixClsFun = (props: Pick<WrapProps, 'prefixCls'>) => props.prefixCls;
+
+export const Wrap = styled.div<WrapProps>`
+  display: inline-flex;
+  min-width: 300px;
+  & .${preFixClsFun} {
     display: inline-flex;
-    width: 100%;
+    flex: 1;
     padding: 2px;
     padding-left: 12px;
     font-size: 14px;
@@ -16,11 +24,13 @@ export const Wrap = styled.div`
       box-shadow: 0 0 4px 0 rgba(129, 122, 242, 0.2), 0 0 8px 0 rgba(129, 122, 242, 0.2);
     }
 
-    .inputWrap {
+    .${preFixClsFun}-input-wrap {
       display: flex;
       flex: 1;
+      align-items: center;
       margin-right: 8px;
-      .input {
+
+      .${preFixClsFun}-input {
         display: block;
         width: 100%;
         min-height: 32px;
@@ -31,12 +41,13 @@ export const Wrap = styled.div`
         border: none;
         outline: none;
       }
-      .clear {
+      .${preFixClsFun}-clear {
         display: flex;
         align-items: center;
         width: 18px;
         margin-left: 11px;
-        .clearIcon {
+
+        .${preFixClsFun}-clear-icon {
           color: #a6a6c1;
           cursor: pointer;
           &:hover {
@@ -46,7 +57,7 @@ export const Wrap = styled.div`
       }
     }
 
-    .searchBtn {
+    .${preFixClsFun}-search-btn {
       font-size: 14px;
       border-radius: 20px;
       padding: 4px 16px;
@@ -63,23 +74,9 @@ export const Wrap = styled.div`
         background: #b1a8ff;
       }
     }
+
+    .${preFixClsFun}-hidden {
+      display: none;
+    }
   }
 `;
-
-// interface WrapProps {
-// prefixCls: string;
-// }
-// export const Wrap = styled.div<WrapProps>`
-//   & .${(props) => props.prefixCls}-listSearch {
-//     display: inline-flex;
-//     width: 100%;
-//     padding: 2px;
-//     padding-left: 12px;
-//     font-size: 14px;
-//     line-height: 1.5715;
-//     border: 1px solid #817af2;
-//     border-radius: 20px;
-//     transition: box-shadow 0.5s;
-//     background-color: skyblue;
-//   }
-// `;

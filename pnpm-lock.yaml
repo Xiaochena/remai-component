@@ -72,12 +72,14 @@ importers:
     specifiers:
       '@ant-design/icons': ^4.7.0
       '@types/styled-components': ^5.1.26
+      classnames: ^2.3.2
       react: ^18.2.0
       react-dom: ^18.2.0
       react-is: ^18.2.0
       styled-components: ^5.3.5
     dependencies:
       '@ant-design/icons': 4.7.0_biqbaboplfbrettd7655fr4n2y
+      classnames: 2.3.2
       styled-components: 5.3.5_7i5myeigehqah43i5u7wbekgba
     devDependencies:
       '@types/styled-components': 5.1.26
