@@ -20,6 +20,7 @@ export const Wrap = styled.div<WrapProps>`
     overflow: hidden;
     border-radius: 20px;
     transition: box-shadow 0.5s;
+    background-color: #fff;
     &:hover {
       box-shadow: 0 0 4px 0 rgba(129, 122, 242, 0.2), 0 0 8px 0 rgba(129, 122, 242, 0.2);
     }
