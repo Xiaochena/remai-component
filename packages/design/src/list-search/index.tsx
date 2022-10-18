@@ -13,7 +13,6 @@ type ButtonMouseEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 export interface ListSearchProps {
   value?: string;
   placeholder?: string;
-  addonBefore?: React.ReactNode;
   onChange?: (e: InputChangeEvent) => void;
   onSearch?: (val: string, e: ButtonMouseEvent) => void;
   style?: React.CSSProperties;
