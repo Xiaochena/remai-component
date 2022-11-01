@@ -2,7 +2,7 @@ import { SearchOutlined } from '@ant-design/icons';
 import { useContext, useMemo } from 'react';
 import classnames from 'classnames';
 
-import useControllableValue from '../hook/useControllableValue';
+import useControlValue from '../hook/useControlValue';
 import IconFont from '../icon-font';
 import ConfigContext from '../utils/config-provider/ConfigContext';
 import * as Styled from './style';
@@ -22,7 +22,10 @@ export interface ListSearchProps {
 const ListSearch: React.FC<ListSearchProps> = (props) => {
   const { placeholder, value, style, classNames, onChange, onSearch } = props;
 
-  const [inputValue, setInputValue] = useControllableValue({ value });
+  const { prefixCls: globalPrefixCls } = useContext(ConfigContext);
+  const prefixCls = `${globalPrefixCls}-list-search`;
+
+  const [inputValue, setInputValue] = useControlValue({ value });
 
   const handleOnChange = (e: InputChangeEvent) => {
     setInputValue(e.target.value);
@@ -32,10 +35,6 @@ const ListSearch: React.FC<ListSearchProps> = (props) => {
   const handleOnSearch = (e: ButtonMouseEvent) => {
     onSearch?.(inputValue || '', e);
   };
-
-  const { prefixCls: globalPrefixCls } = useContext(ConfigContext);
-
-  const prefixCls = `${globalPrefixCls}-list-search`;
 
   const clearIconFontCls = useMemo(
     () =>
@@ -51,7 +50,7 @@ const ListSearch: React.FC<ListSearchProps> = (props) => {
       <div className={`${prefixCls}`}>
         <div className={`${prefixCls}-input-wrap`}>
           <input
-            value={inputValue}
+            value={inputValue || ''}
             type="text"
             className={`${prefixCls}-input`}
             placeholder={placeholder}
