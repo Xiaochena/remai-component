@@ -50,7 +50,7 @@
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^27.0.3",
-    "@types/react": "^18.0.18",
+    "@types/react": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "@umijs/fabric": "^2.8.1",
