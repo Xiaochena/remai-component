@@ -1,7 +1,12 @@
 import { useRef } from 'react';
-import useUpdate from './useUpdate';
+import useUpdate from '../useUpdate';
 
-function useControllableValue<T>(props?: { value: T; onChange?: (val: T) => void }) {
+interface useControllableValueProps<T> {
+  value: T;
+  onChange?: (val: T) => void;
+}
+
+function useControllableValue<T>(props?: useControllableValueProps<T>) {
   const { value, onChange } = props || {};
 
   const isControlled = props?.hasOwnProperty('value');

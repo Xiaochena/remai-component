@@ -7,6 +7,7 @@
     "start": "dumi dev",
     "build:design": "pnpm --filter @remai/design build",
     "build:business": "pnpm --filter @remai/business build",
+    "build": "pnpm --filter @remai/* build",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
     "deploy": "npm run docs:build && npm run docs:deploy",
