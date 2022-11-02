@@ -5,8 +5,8 @@ nav:
   order: 1
   path: /design
 group:
-  title: 通用组件
-  order: 2
+  title: 示例
+  order: 1
 ---
 
 # Btn 按钮

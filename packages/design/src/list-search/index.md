@@ -6,7 +6,7 @@ nav:
   path: /design
 group:
   title: UI 组件
-  order: 1
+  order: 2
 ---
 
 # ListSearch 输入框
