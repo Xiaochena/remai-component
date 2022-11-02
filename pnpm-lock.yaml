@@ -6,11 +6,14 @@ importers:
     specifiers:
       '@commitlint/cli': ^17.1.2
       '@commitlint/config-conventional': ^17.1.0
+      '@testing-library/dom': ^8.19.0
       '@testing-library/jest-dom': 5.16.4
       '@testing-library/react': 12.1.4
       '@testing-library/react-hooks': 8.0.0
+      '@testing-library/user-event': 14.1.0
       '@types/jest': 27.4.1
       '@types/react': ^17.0.0
+      '@types/testing-library__jest-dom': ^5.14.5
       '@typescript-eslint/eslint-plugin': ^5.36.2
       '@typescript-eslint/parser': ^5.36.2
       '@umijs/fabric': ^2.8.1
@@ -37,11 +40,14 @@ importers:
     devDependencies:
       '@commitlint/cli': 17.1.2
       '@commitlint/config-conventional': 17.1.0
+      '@testing-library/dom': 8.19.0
       '@testing-library/jest-dom': 5.16.4
       '@testing-library/react': 12.1.4_sfoxds7t5ydpegc3knd667wn6m
       '@testing-library/react-hooks': 8.0.0_hiunvzosbwliizyirxfy6hjyim
+      '@testing-library/user-event': 14.1.0_aaq3sbffpfe3jnxzm2zngsddei
       '@types/jest': 27.4.1
       '@types/react': 17.0.50
+      '@types/testing-library__jest-dom': 5.14.5
       '@typescript-eslint/eslint-plugin': 5.40.1_ukgdydjtebaxmxfqp5v5ulh64y
       '@typescript-eslint/parser': 5.40.1_z4bbprzjrhnsfa24uvmcbu7f5q
       '@umijs/fabric': 2.14.0
@@ -2970,6 +2976,15 @@ packages:
       '@types/react-dom': 16.9.16
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+    dev: true
+
+  /@testing-library/user-event/14.1.0_aaq3sbffpfe3jnxzm2zngsddei:
+    resolution: {integrity: sha512-+CGfMXlVM+OwREHDEsfTGsXIMI+rjr3a7YBUSutq7soELht+8kQrM5k46xa/WLfHdtX/wqsDIleL6bi4i+xz0w==}
+    engines: {node: '>=12', npm: '>=6'}
+    peerDependencies:
+      '@testing-library/dom': '>=7.21.4'
+    dependencies:
+      '@testing-library/dom': 8.19.0
     dev: true
 
   /@tootallnate/once/1.1.2:
