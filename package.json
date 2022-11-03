@@ -13,7 +13,7 @@
     "deploy": "npm run docs:build && npm run docs:deploy",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "jest",
-    "clean": "rimraf packages/*/{dist,node_modules}  && rimraf node_modules",
+    "clean": "rimraf packages/*/{cjs,esm,node_modules}  && rimraf {node_modules,.umi}",
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build",
     "preinstall": "npx only-allow pnpm",
