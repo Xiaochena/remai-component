@@ -1,10 +1,13 @@
 {
   "name": "@remai/design",
-  "version": "1.0.0",
+  "version": "0.0.1-experimental.2",
   "description": "",
-  "main": "dist/esm/index.js",
+  "main": "cjs/index.js",
+  "typings": "cjs/index.d.ts",
+  "module": "esm/index.js",
   "files": [
-    "dist"
+    "esm",
+    "cjs"
   ],
   "scripts": {
     "build": "father build",

@@ -1,6 +1,6 @@
 {
   "name": "@remai/business",
-  "version": "1.0.0",
+  "version": "0.0.1-experimental.2",
   "description": "",
   "main": "cjs/index.js",
   "typings": "cjs/index.d.ts",
