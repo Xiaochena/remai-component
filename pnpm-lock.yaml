@@ -33,6 +33,7 @@ importers:
       react: ^17.0.0
       react-dom: ^17.0.0
       react-router: ^6.3.0
+      rimraf: ^3.0.2
       ts-jest: 27.1.4
       typescript: ^4.8.2
       webpack: ^5.74.0
@@ -67,6 +68,7 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-router: 6.4.2_react@17.0.2
+      rimraf: 3.0.2
       ts-jest: 27.1.4_xerqtbejmnw475lu34ngccv2su
       typescript: 4.8.4
       webpack: 5.74.0
@@ -8975,11 +8977,11 @@ packages:
     dev: true
 
   /inherits/2.0.1:
-    resolution: {integrity: sha1-sX0I0ya0Qj5Wjv9xn5GwscvfafE=}
+    resolution: {integrity: sha512-8nWq2nLTAwd02jTqJExUYFSD/fKq6VH9Y/oG2accc/kdI0V98Bag8d5a4gi3XHz73rDWa2PvTtvcWYquKqSENA==}
     dev: true
 
   /inherits/2.0.3:
-    resolution: {integrity: sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=}
+    resolution: {integrity: sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==}
     dev: true
 
   /inherits/2.0.4:

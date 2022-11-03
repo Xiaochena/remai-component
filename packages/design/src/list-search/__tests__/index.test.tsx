@@ -3,13 +3,33 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import ListSearch from '../';
+import ListSearch, { ListSearchProps } from '../';
 
 describe('<ListSearch />', () => {
   it('placeholder', () => {
     const placeholder = '请输入';
     render(<ListSearch placeholder={placeholder} />);
     expect(screen.getByPlaceholderText(placeholder)).toBeInTheDocument();
+  });
+
+  it('onSearch', async () => {
+    let value;
+    const enterKey = '111';
+    const onSearch: ListSearchProps['onSearch'] = (val) => {
+      value = val;
+    };
+    render(<ListSearch onSearch={onSearch} />);
+    const input = screen.getByRole('textbox');
+    // 注焦、输入
+    input.focus();
+    await userEvent.keyboard(enterKey);
+    // 校验value是否发生改变
+    expect(screen.getByDisplayValue(enterKey)).toBeEmptyDOMElement();
+    // 点击 查询
+    const btn = screen.getByRole('button', { name: /search/i });
+    await userEvent.click(btn);
+
+    expect(value).toEqual(enterKey);
   });
 
   it('value is not controlled', async () => {
