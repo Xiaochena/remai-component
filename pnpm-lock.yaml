@@ -111,19 +111,19 @@ importers:
       classnames: ^2.3.2
       react: ^17.0.0
       react-dom: ^17.0.0
-      react-is: ^18.2.0
+      react-is: ^17.0.0
       styled-components: ^5.3.5
     dependencies:
       '@ant-design/icons': 4.7.0_sfoxds7t5ydpegc3knd667wn6m
       '@remai/config': link:../config
       antd: 4.23.6_sfoxds7t5ydpegc3knd667wn6m
       classnames: 2.3.2
-      styled-components: 5.3.6_v5ja746gkdtknuc6tj46sve3be
+      styled-components: 5.3.6_fane7jikarojcev26y27hpbhu4
     devDependencies:
       '@types/styled-components': 5.1.26
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      react-is: 18.2.0
+      react-is: 17.0.2
 
 packages:
 
@@ -4915,7 +4915,7 @@ packages:
       babel-plugin-syntax-jsx: 6.18.0
       lodash: 4.17.21
       picomatch: 2.3.1
-      styled-components: 5.3.6_v5ja746gkdtknuc6tj46sve3be
+      styled-components: 5.3.6_fane7jikarojcev26y27hpbhu4
     dev: false
 
   /babel-plugin-syntax-jsx/6.18.0:
@@ -14005,10 +14005,6 @@ packages:
 
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
-    dev: true
-
-  /react-is/18.2.0:
-    resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
 
   /react-refresh/0.10.0:
     resolution: {integrity: sha512-PgidR3wST3dDYKr6b4pJoqQFpPGNKDSCDx4cZoshjXipw3LzO7mG1My2pwEzz2JVkF+inx3xRpDeQLFQGH/hsQ==}
@@ -15389,7 +15385,7 @@ packages:
       inline-style-parser: 0.1.1
     dev: true
 
-  /styled-components/5.3.6_v5ja746gkdtknuc6tj46sve3be:
+  /styled-components/5.3.6_fane7jikarojcev26y27hpbhu4:
     resolution: {integrity: sha512-hGTZquGAaTqhGWldX7hhfzjnIYBZ0IXQXkCYdvF1Sq3DsUaLx6+NTHC5Jj1ooM2F68sBiVz3lvhfwQs/S3l6qg==}
     engines: {node: '>=10'}
     requiresBuild: true
@@ -15408,7 +15404,7 @@ packages:
       hoist-non-react-statics: 3.3.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      react-is: 18.2.0
+      react-is: 17.0.2
       shallowequal: 1.1.0
       supports-color: 5.5.0
     dev: false
