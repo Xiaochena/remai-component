@@ -1,14 +1,29 @@
 .workList {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  .searchBox {
+    .search {
+      display: flex;
+    }
 
-  .search {
-    display: flex;
+    .screen {
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      margin-left: 16px;
+    }
   }
 
-  .screen {
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-    margin-left: 16px;
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 20px;
+    .formItem {
+      margin-bottom: 0px;
+    }
+    .tagContent {
+      padding: 4px 0;
+    }
   }
 }

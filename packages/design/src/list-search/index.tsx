@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import useControlValue from '../hook/useControlValue';
 import IconFont from '../icon-font';
 import ConfigContext from '../utils/config-provider/ConfigContext';
-import * as Styled from './style';
+import * as Styled from './styles';
 
 type InputChangeEvent = React.ChangeEvent<HTMLInputElement>;
 type ButtonMouseEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;

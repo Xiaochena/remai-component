@@ -1,1 +1,1 @@
-export { default as Work } from './work/list';
+export { default as WorkList } from './work/list';
