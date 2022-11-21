@@ -6,42 +6,46 @@ import { useControlValue } from '../hook';
 import * as Styled from './styles';
 import ConfigContext from '../utils/config-provider/ConfigContext';
 
-type OptionType<T> = {
-  label: string;
-  value: T;
-  children?: OptionType<T>[];
-  [x: string]: string | T | OptionType<T>[] | undefined;
-};
+type BaseOption<T> = { label: string; value: T };
+
+interface Option<T> extends BaseOption<T> {
+  children?: BaseOption<T>[];
+  [x: string]: string | T | Omit<Option<T>, 'children'>[] | undefined;
+}
 
 interface TagCascadeProps<T> {
-  value?: T;
-  options?: OptionType<T>[];
+  value?: T[];
+  options?: Option<T>[];
   className?: string;
   style?: React.CSSProperties;
-  onChange?: (val: T, item: OptionType<T>) => {};
+  onChange?: (val: T[]) => {};
 }
 
 function TagCascade<T extends string | number>(props: TagCascadeProps<T>) {
   const { options = [], className, style, onChange } = props;
 
-  const [value, setValue] = useControlValue<T>();
+  const [value, setValue] = useControlValue<T[]>();
 
   const { prefixCls: globalPrefixCls } = useContext(ConfigContext);
   const prefixCls = `${globalPrefixCls}-tag-cascade`;
 
-  const changeValue = (value: T, item: OptionType<T>) => {
+  const changeValue = (item: Option<T>, parent?: Option<T>) => {
+    const value = [item.value];
+    if (parent) {
+      value.unshift(parent?.value);
+    }
     setValue(value);
-    onChange?.(value, item);
+    onChange?.(value);
   };
 
-  const showLi = (item: OptionType<T>, isChild?: boolean) => {
+  const showLi = (item: BaseOption<T>, parent?: Option<T>) => {
     const liClass = classnames(`${prefixCls}-tag`, {
-      [`${prefixCls}-active`]: value === item.value && !isChild,
-      [`${prefixCls}-child-active`]: value === item.value && isChild,
+      [`${prefixCls}-active`]: value?.[0] === item.value && !parent,
+      [`${prefixCls}-child-active`]: value?.[1] === item.value && parent,
     });
 
     return (
-      <li className={liClass} key={item.value} onClick={() => changeValue(item.value, item)}>
+      <li className={liClass} key={item.value} onClick={() => changeValue(item, parent)}>
         {item.label}
       </li>
     );
@@ -50,27 +54,27 @@ function TagCascade<T extends string | number>(props: TagCascadeProps<T>) {
   return (
     <Styled.Wrap className={className} style={style} prefixCls={prefixCls}>
       <div className={prefixCls}>
-        {options.map((item) => {
-          if (item.children) {
+        {options.map((parent) => {
+          if (parent.children) {
             return (
               <Popover
                 getPopupContainer={(triggerNode) => triggerNode}
                 overlayClassName={`${prefixCls}-cascade-popover`}
-                key={item.value}
+                key={parent.value}
                 content={
                   <Styled.Wrap prefixCls={prefixCls}>
                     <div className={prefixCls}>
-                      {item.children.map((child) => showLi(child, true))}
+                      {parent.children.map((child) => showLi(child, parent))}
                     </div>
                   </Styled.Wrap>
                 }
               >
-                {showLi(item)}
+                {showLi(parent)}
               </Popover>
             );
           }
 
-          return showLi(item);
+          return showLi(parent);
         })}
       </div>
     </Styled.Wrap>
