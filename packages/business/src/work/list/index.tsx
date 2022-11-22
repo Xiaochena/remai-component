@@ -15,6 +15,9 @@ interface WorkListProps {
 
 const WorkList: FC<WorkListProps> = (props) => {
   const { className } = props;
+  const onChange = (value: any) => {
+    // console.log(value, 'value');
+  };
 
   return (
     <ListLayout headerImg={xhsWorkHeader} className={classnames(styles.workList, className)}>
@@ -32,6 +35,8 @@ const WorkList: FC<WorkListProps> = (props) => {
       <Form className={styles.form}>
         <Form.Item name="mediaCategoryId" label="作品类别" className={styles.formItem}>
           <TagCascade
+            multiple
+            onChange={onChange}
             className={styles.tagContent}
             options={[
               {
