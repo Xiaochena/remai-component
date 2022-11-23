@@ -89,7 +89,6 @@ function TagCascade<T extends string | number>(props: TagCascadeProps<T>) {
           if (parent.children) {
             return (
               <Popover
-                open
                 getPopupContainer={(triggerNode) => triggerNode}
                 overlayClassName={`${prefixCls}-cascade-popover`}
                 key={parent.value}
