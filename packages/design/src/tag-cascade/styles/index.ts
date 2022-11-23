@@ -37,7 +37,7 @@ export const Wrap = styled.div<WrapProps>`
     }
   }
   .${preFixClsFun}-cascade-popover {
-    .remai-popover-inner-content {
+    .remai-popover-inner {
       padding: 4px;
     }
   }
