@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "antd": "^4.23.6"
+    "antd": "^5.0.0"
   },
   "devDependencies": {
     "react": "^17.0.0",
@@ -24,7 +24,6 @@
   },
   "peerDependencies": {
     "react": ">=17.0.0",
-    "react-dom": ">=17.0.0",
-    "antd": ">=4.20.0"
+    "react-dom": ">=17.0.0"
   }
 }

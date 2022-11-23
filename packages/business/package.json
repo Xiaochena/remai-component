@@ -18,7 +18,7 @@
   "dependencies": {
     "@remai/config": "workspace:^",
     "@remai/design": "workspace:^",
-    "antd": "^4.23.6",
+    "antd": "^5.0.0",
     "classnames": "^2.3.2"
   },
   "devDependencies": {

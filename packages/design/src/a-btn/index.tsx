@@ -3,8 +3,8 @@ import { changeAntdConfig } from '@remai/config';
 
 import type { ButtonProps } from 'antd/es/button';
 
-const Btn: React.FC<ButtonProps> = () => {
-  return <Button>ABtn</Button>;
+const Btn: React.FC<ButtonProps> = (props) => {
+  return <Button {...props} />;
 };
 
 const ABtn = changeAntdConfig(Btn);
